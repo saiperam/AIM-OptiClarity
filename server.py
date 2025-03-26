@@ -7,7 +7,7 @@ import tensorflow as tf
 app = Flask(__name__)
 CORS(app)
 
-model = tf.keras.models.load_model('corneal_ulcer_model.keras') #loading trained model
+model = tf.keras.models.load_model('corneal_ulcer_model.h5') #loading trained model
 
 def preprocess(image):
   image = cv2.resize(image, (224,224))
@@ -24,7 +24,7 @@ def predict():
     return jsonify({"error":"no image uploaded"}), 400
   
   file = request.files['image']    # key is image in post request, value is the file
-  file_bytes = np.frombuffer(file.read(),np.uint8)    # getting gile bytes
+  file_bytes = np.frombuffer(file.read(),np.uint8)    # getting file bytes
   img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)     # converting into image array
 
   img = preprocess(img) 
@@ -35,9 +35,9 @@ def predict():
 
   prediction_list = decoded_prediction.tolist()    # converting to list so its json serializable
 
-  return jsonify({"prediction": prediction_list[0]})
+  return jsonify({"prediction": prediction_list})
 
-@app.route("/get", methods = ['GET'])
+@app.route("/get", methods = ['GET'])   # testing server
 def hello_world():
   return "<p>Hello World!</p>"
 
