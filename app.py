@@ -44,13 +44,9 @@ def predict():
         else:
             class_label = "Suspect"
         
-        # Convert prediction to a Python float to avoid serialization error
-        accuracy = float(np.max(prediction) * 100)
-        
         # Return the prediction and accuracy
         return jsonify({
             'predicted_class': class_label,
-            'accuracy': accuracy
         })
     
     except Exception as e:
