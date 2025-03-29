@@ -17,25 +17,29 @@ const UploadScans = () => {
     const options = ["OCT", "Fundus", "Corneal Ulcer", "Keratoconus"];
   
     const sendFile = async () => {
-        if (selectedFile) {
-            let formData = new FormData();
-            formData.append("file", selectedFile);
-            setIsLoading(true);
-    
-            try {
-                let res = await axios.post("http://localhost:8001/predict", formData);
-                if (res.status === 200) {
-                    setData(res.data);
-                    setConfidence(res.data.confidence !== undefined ? parseFloat(res.data.confidence).toFixed(2) : "N/A");
-                    setShowPopup(true);
-                }
-            } catch (error) {
-                console.error("Error uploading file:", error);
-            } finally {
-                setIsLoading(false);
-            }
-        }
-    };
+      if (selectedFile && selectedOption === "OCT") {  // Only proceed if 'OCT' is selected
+          let formData = new FormData();
+          formData.append("file", selectedFile);
+          setIsLoading(true);
+  
+          try {
+              let res = await axios.post("http://localhost:8001/predict/", formData);
+              if (res.status === 200) {
+                  setData(res.data);
+                  setConfidence(res.data.confidence !== undefined ? (res.data.confidence * 100).toFixed(1) : "N/A");
+                  setShowPopup(true);
+              }
+          } catch (error) {
+              console.error("Error uploading file:", error);
+          } finally {
+              setIsLoading(false);
+          }
+      } else {
+          // Option is not 'OCT', don't send the request
+          console.log("Please select 'OCT' to upload the scan.");
+      }
+  };
+  ;
     
     const clearData = () => {
         setData(null);
@@ -325,12 +329,6 @@ const UploadScans = () => {
 };
 
 export default UploadScans;*/}
-
-
-
-
-
-
 
 
 
