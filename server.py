@@ -32,10 +32,12 @@ def predict():
   prediction = model.predict(img)
 
   decoded_prediction = prediction.argmax(axis=1)   # highest prediciton
-
-  prediction_list = decoded_prediction.tolist()    # converting to list so its json serializable
-
-  return jsonify({"prediction": prediction_list})
+  
+  prediction_list = prediction.tolist()    # converting to list so its json serializable
+  
+  conf_score = max(prediction_list[0])    # confidence score of highest prediction
+  
+  return jsonify({'prediction': str(decoded_prediction[0]), 'confidence score': str(conf_score)})
 
 @app.route("/get", methods = ['GET'])   # testing server
 def hello_world():
