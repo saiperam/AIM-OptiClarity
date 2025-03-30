@@ -30,7 +30,7 @@ app.add_middleware(
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Define class names
-CLASS_NAMES = ["NORMAL", "MH", "DRUSEN", "DR", "DME", "CSR", "CNV", "AMD"]
+CLASS_NAMES = ["NORMAL", "Macular Hole", "DRUSEN", "Diabetic Retinopathy", "Diabetic Macular Edema", "Central Serous Retinopathy", "Choroidal Neovascularization", "Age-related Macular Degeneration"]
 NUM_CLASSES = len(CLASS_NAMES)
 
 # Define model URL from Hugging Face (replace YOUR_USERNAME with your actual username)
