@@ -17,16 +17,24 @@ const UploadScans = () => {
     const options = ["OCT", "Fundus", "Corneal Ulcer", "Keratoconus"];
   
     const sendFile = async () => {
-      if (selectedFile && selectedOption === "OCT") {  // Only proceed if 'OCT' is selected
+      if (selectedFile) {  // Proceed if a file is selected
           let formData = new FormData();
-          formData.append("file", selectedFile);
+          formData.append("file", selectedFile);  // Ensure the file is named 'image' in the request
           setIsLoading(true);
   
           try {
-              let res = await axios.post("http://localhost:8001/predict/", formData);
+              let res;
+              if (selectedOption === "OCT") {
+                  // For OCT, use localhost:8001
+                  res = await axios.post("http://localhost:8001/predict/", formData);
+              } else if (selectedOption === "Corneal Ulcer") {
+                  // For Corneal Ulcer, use localhost:8002
+                  res = await axios.post("http://localhost:8002/predict", formData);
+              }
+              
               if (res.status === 200) {
                   setData(res.data);
-                  setConfidence(res.data.confidence !== undefined ? (res.data.confidence * 100).toFixed(1) : "N/A");
+                  setConfidence(res.data.confidence !== undefined ? (res.data.confidence * 100).toFixed(2) : "N/A");
                   setShowPopup(true);
               }
           } catch (error) {
@@ -35,11 +43,10 @@ const UploadScans = () => {
               setIsLoading(false);
           }
       } else {
-          // Option is not 'OCT', don't send the request
-          console.log("Please select 'OCT' to upload the scan.");
+          console.log("Please select an image file to upload.");
       }
   };
-  ;
+  
     
     const clearData = () => {
         setData(null);
@@ -329,6 +336,4 @@ const UploadScans = () => {
 };
 
 export default UploadScans;*/}
-
-
 
