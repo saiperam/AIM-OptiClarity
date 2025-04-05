@@ -5,15 +5,13 @@ import numpy as np
 import io
 import tensorflow as tf
 
-print(tf.__version__)  # Check TensorFlow version
-print(tf.keras)  # Check if Keras is available under tensorflow
+print(tf.__version__)  
+print(tf.keras)  
 
 
-# Initialize the Flask application
 app = Flask(__name__)
 
-# Load your model (ensure it's saved and accessible)
-model = tf.keras.models.load_model('keratoconus_detection_model3-23.h5')  # Adjust model path
+model = tf.keras.models.load_model('keratoconus_detection_model3-23.h5')  
 
 @app.route('/')
 def home():
@@ -21,21 +19,16 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Get the image file from the request
         file = request.files['file']
         
-        # Read the image
         image = Image.open(io.BytesIO(file.read()))
-        image = image.resize((224, 224))  # Resize as needed
-        image = np.array(image) / 255.0  # Normalize the image
+        image = image.resize((224, 224)) 
+        image = np.array(image) / 255.0  
         
-        # Add batch dimension (for model input)
         image = np.expand_dims(image, axis=0)
         
-        # Make prediction
         prediction = model.predict(image)
         
-        # Process the prediction (e.g., get class label)
         class_label = np.argmax(prediction)
         if class_label == 0:
             class_label = "Keratoconus"
@@ -43,14 +36,19 @@ def predict():
             class_label = "Normal"
         else:
             class_label = "Suspect"
+        accuracy = float(np.max(prediction) * 100)
         
-        # Return the prediction and accuracy
         return jsonify({
             'predicted_class': class_label,
+            'accuracyw': accuracy
         })
     
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({'status': 'app.py is up to date'})
 
 
 if __name__ == '__main__':
