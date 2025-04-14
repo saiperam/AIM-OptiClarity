@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import UploadScans from '../components/UploadScans'
 import Chatbot from '../components/Chatbot'
+import Testimonials from '../components/Testimonials'
 
 export const Home = () => {
   return (
@@ -18,6 +19,10 @@ export const Home = () => {
         <div>
             <Chatbot/>
         </div>    
+        {/*Testimonials Section */}
+        <div>
+          <Testimonials/>
+        </div>
     </div>
   )
 }
