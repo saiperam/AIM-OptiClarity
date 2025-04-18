@@ -1,4 +1,0 @@
-.env
-vectorstore/
-*.pdf
-__pycache__/
