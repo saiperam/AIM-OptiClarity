@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import UploadScans from '../components/UploadScans'
 import Chatbot from '../components/Chatbot'
 import Testimonials from '../components/Testimonials'
+import Scheduler from '../components/Scheduler'
 
 export const Home = () => {
   return (
@@ -19,6 +20,10 @@ export const Home = () => {
         <div>
             <Chatbot/>
         </div>    
+        {/* Schedule Section */}
+        <div>
+          <Scheduler/>
+        </div>
         {/*Testimonials Section */}
         <div>
           <Testimonials/>
