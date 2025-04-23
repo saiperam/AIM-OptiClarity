@@ -1,4 +1,3 @@
-// App.jsx - Main React Application with Patient Availability Display
 import React, { useState, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
@@ -311,7 +310,7 @@ export default function AppointmentScheduler() {
     <div className="space-y-6 sm:mx-16 my-8">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <h2
-          className="text-3xl font-bold text-center text-blue-900"
+          className="sm:text-3xl text-2xl font-bold text-center text-blue-900"
           data-aos="fade-right"
           data-aos-delay="300"
         >
@@ -319,7 +318,7 @@ export default function AppointmentScheduler() {
         </h2>
         <span className="block w-16 h-1 bg-gradient-to-r from-blue-300 to-blue-900 mx-auto mt-4 rounded-full"></span>
       </div>
-      <div className="flex space-x-4">
+      <div className="flex sm:space-x-4 sm:text-base text-sm space-x-2 px-4 sm:px-0">
         <button
           className={`px-4 py-2 rounded ${
             view === "schedule" ? "bg-blue-800 text-white" : "bg-gray-200"
@@ -365,24 +364,24 @@ export default function AppointmentScheduler() {
       )}
 
       {view === "schedule" && (
-        <div className="space-y-4">
+        <div className="space-y-4 px-4">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-semibold">Appointment Schedule</h2>
-            <div className="flex space-x-2 items-center">
-              <div className="flex items-center">
+            <div className="flex sm:flex-row flex-col items-start space-x-2 space-y-2 sm:space-y-0 sm:items-center">
+              <div className="flex items-center ml-2">
                 <div className="w-4 h-4 bg-red-500 rounded mr-1"></div>
                 <span className="text-sm text-gray-600">Blocked</span>
               </div>
-              <div className="flex items-center ml-2">
+              <div className="flex items-center sm:ml-2">
                 <div className="w-4 h-4 bg-green-500 rounded mr-1"></div>
                 <span className="text-sm text-gray-600">Available</span>
               </div>
-              <div className="flex items-center ml-2">
+              <div className="flex items-center sm:ml-2">
                 <div className="w-4 h-4 bg-blue-500 rounded mr-1"></div>
                 <span className="text-sm text-gray-600">Appointment</span>
               </div>
               <button
-                className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition ml-4"
+                className="sm:text-base text-sm sm:px-4 sm:py-2 px-2 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition sm:ml-4"
                 onClick={generateSchedule}
                 disabled={loading}
               >
@@ -595,7 +594,7 @@ function PatientAvailability({
   };
 
   return (
-    <div className="space-y-6 sm:mx-16 my-8">
+    <div className="space-y-6 sm:mx-16 my-8 px-4">
       <h2 className="text-xl font-semibold">Patient Availability</h2>
 
       <div className="bg-white p-6 rounded shadow-md">
@@ -795,7 +794,7 @@ function BlockTimeManager({
   };
 
   return (
-    <div className="space-y-6 sm:mx-16 my-8">
+    <div className="space-y-6 sm:mx-16 my-8 px-4">
       <h2 className="text-xl font-semibold">Block Times & Buffer Settings</h2>
 
       <div className="bg-white p-6 rounded shadow-md">

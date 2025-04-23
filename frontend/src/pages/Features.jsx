@@ -4,7 +4,7 @@ export const Features = () => {
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-16" data-aos="fade-top" data-aos-delay="300">Our Features</h1>
+        <h1 className="sm:text-4xl text-3xl font-bold text-center mb-16" data-aos="fade-top" data-aos-delay="300">Our Features</h1>
         <div className="grid md:grid-cols-3 gap-8">
           {/* OCT & Fundus Analysis */}
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition" data-aos="fade-right" data-aos-delay="300">

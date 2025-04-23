@@ -62,7 +62,7 @@ export const About = () => {
       {/* Team Section */}
       <section className="bg-white py-10 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12" data-aos="fade-top" data-aos-delay="300">
+          <h2 className="sm:text-4xl text-3xl font-bold text-center mb-12" data-aos="fade-top" data-aos-delay="300">
             Our Team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 sm:gap-16 gap-10 max-w-6xl mx-auto">

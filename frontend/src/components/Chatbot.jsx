@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
-      text: "Hello! How can I help you with your eye health today?",
+      text: "Hello! I'm OptiBot, how can I help you today?",
       sender: "bot",
     },
   ]);
@@ -56,7 +56,7 @@ const Chatbot = () => {
     <div className="overflow-x-hidden">
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900">
+          <h2 className="sm:text-3xl text-2xl font-bold text-center text-blue-900">
             Your Eye Health Advisor
           </h2>
           <span className="block w-16 h-1 bg-gradient-to-r from-blue-300 to-blue-900 mx-auto mt-4 mb-6 rounded-full"></span>

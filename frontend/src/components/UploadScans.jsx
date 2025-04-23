@@ -96,7 +96,7 @@ const UploadScans = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className="text-3xl font-bold text-center text-blue-900"
+          className="sm:text-3xl text-2xl font-bold text-center text-blue-900"
           data-aos="fade-right"
           data-aos-delay="300"
         >

@@ -5,7 +5,7 @@ const Testimonials = () => {
     <div className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-0">
         <div className="flex flex-col items-center text-center space-y-6">
-          <h2 className="text-3xl font-bold text-blue-900 relative" data-aos="fade-right" data-aos-delay="100">
+          <h2 className="sm:text-3xl text-2xl font-bold text-blue-900 relative" data-aos="fade-right" data-aos-delay="100">
             Trusted by Eye-health Professionals
             <span className="block w-16 h-1 bg-gradient-to-r from-blue-300 to-blue-900 mx-auto mt-4 rounded-full"></span>
           </h2>

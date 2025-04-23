@@ -5,7 +5,7 @@ export const Contact = () => {
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-6" data-aos="fade-top" data-aos-delay="300">Get in Touch</h1>
+        <h1 className="sm:text-4xl text-3xl font-bold text-center mb-6" data-aos="fade-top" data-aos-delay="300">Get in Touch</h1>
         {/* Social Links */}
         <div className="flex justify-center space-x-8 mb-4">
           <a
