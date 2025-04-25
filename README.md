@@ -53,5 +53,6 @@ npm run dev
 cd backend
 pip install -r requirements.txt
 run all the .py files
+enter your own huggingface tokens when required
 ```
 
