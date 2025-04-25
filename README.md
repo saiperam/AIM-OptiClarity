@@ -12,7 +12,7 @@ OptiClarity is an AI-powered eye health tool that combines deep learning, real-t
 
 ## 🔬 Technology Stack  
 - **Deep Learning**: TensorFlow, Keras, PyTorch, CNN architectures
-- **Models**: ResNet50, MobileNetV2, InceptionV3, EfficientNetB3, Miistral7B
+- **Models**: ResNet50, MobileNetV2, InceptionV3, EfficientNetB3, Mistral7B
 - **Medical Imaging Preprocessing**: Scikit-learn, NumPy, Pandas, Matplotlib, OpenCV
 - **Backend**: Flask, FastAPI, Python 
 - **Frontend**: React.js, Lucide, Tailwind CSS 
