@@ -19,7 +19,7 @@ OptiClarity is an AI-powered eye health tool that combines deep learning, real-t
 - **Cloud & Deployment**: AWS S3, Docker  
 
 ## 🔬 How It Works  
-1️⃣ **Input 1**: Upload Scan images in dropbox Or Enter query in Optibot.  
+1️⃣ **Input(s)**: Upload Scan images in dropbox Or Enter query in Optibot.  
 2️⃣ **Step 1**: **Deep Learning Model** extract patterns from eye scans by learning hierarchical features through convolutional layers to identify and classify eye conditions with high accuracy.    
 3️⃣ **Step 2**: **RAG LangChain Optibot**  retrieves relevant information from an expert knowledge base and generates context-aware responses by combining retrieval with a language model, enabling real-time, reliable guidance.  
 
