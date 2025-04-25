@@ -1,5 +1,5 @@
 # OptiClarity 👁️💡  
-**AI-Powered Eye Disease Diagnosis and Vision Deficiency Assessment**  
+**AI-Powered Eye Health Intelligence & Vision Diagnostics**  
 
 ## 🚀 Overview  
 OptiClarity is an AI-powered eye health tool that combines deep learning, real-time guidance, and intelligent scheduling. It leverages four deep learning models, including an ensemble model, for precise eye scan analysis. A Langchain-based chatbot, using a RAG pipeline, provides expert guidance, while a backtracking algorithm ensures conflict-free appointment scheduling for ophthalmologists and optometrists.  
