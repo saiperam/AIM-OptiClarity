@@ -6,8 +6,8 @@ OptiClarity is an AI-powered eye health tool that combines deep learning, real-t
 
 ## 🏆 Features  
 ✅ Deep Learning for Eye Scan Analysis – OptiClarity leverages four deep learning models, including an ensemble model that combines the strengths of individual models to enhance diagnostic accuracy. The tool is capable of analyzing various eye scans, such as OCT, Fundus, Slit Lamp, and Corneal Topography, for comprehensive eye health assessments.  
-✅ Smart AI Chatbot – Langchain-based chatbot using a RAG pipeline for real-time, expert-level guidance.  
-✅ Conflict-Free Appointment Scheduling – Intelligent scheduling using a backtracking algorithm to ensure seamless booking for ophthalmologists and optometrists.  
+✅ Smart AI Chatbot – Langchain-based chatbot using an advanced RAG pipeline for real-time, expert-level guidance.  
+✅ Conflict-Free Appointment Scheduling – Intelligent scheduling using optimized backtracking to ensure seamless booking for ophthalmologists and optometrists.  
 ✅ Sleek and Mobile-Responsive UI – A user-friendly interface that is optimized for both web and mobile, ensuring smooth and efficient patient interaction.  
 
 ## 🔬 Technology Stack  
