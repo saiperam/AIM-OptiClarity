@@ -24,7 +24,7 @@ OptiClarity is an AI-powered eye health tool that combines deep learning, real-t
 3️⃣ **Step 2**: **RAG LangChain Optibot**  retrieves relevant information from an expert knowledge base and generates context-aware responses by combining retrieval with a language model, enabling real-time, reliable guidance.  
 
 ## 🎯 Impact & Industry Validation  
-OptiClarity accelerates and enhances eye care, enabling:
+OptiClarity accelerates and enhances eye care, enabling:  
 ✅ Instant bridging of the gap between early symptoms and diagnosis, potentially saving vision.  
 ✅ AI-driven, multi-scan analysis that supports ophthalmologists in making faster, more accurate clinical decisions.  
 ✅ Seamless integration of AI into real-world workflows, improving both patient experience and clinical efficiency.  
