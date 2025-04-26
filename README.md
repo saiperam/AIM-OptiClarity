@@ -10,7 +10,7 @@ OptiClarity is an AI-powered eye health application that combines deep learning,
 ✅ Conflict-Free Appointment Scheduling – Intelligent scheduling using optimized backtracking to ensure seamless booking for ophthalmologists and optometrists.  
 ✅ Sleek and Mobile-Responsive UI – A user-friendly interface that is optimized for both web and mobile, ensuring smooth and efficient patient interaction.  
 
-## 🔬 Technology Stack  
+## 📌 Technology Stack  
 - **Deep Learning**: TensorFlow, Keras, PyTorch, CNN architectures
 - **Models**: ResNet50, MobileNetV2, InceptionV3, EfficientNetB3, Mistral7B
 - **Medical Imaging Preprocessing**: Scikit-learn, NumPy, Pandas, Matplotlib, OpenCV
